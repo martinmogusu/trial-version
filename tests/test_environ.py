@@ -6,5 +6,5 @@ from trial_version.environ import *
 class EnvironTestCase(TestCase):
 
 	def test_environ(self):
-		val = get_environ('TEST_CREDENTIAL')
-		self.assertEqual(val, '12345')
+		value = get_environ('TEST_CREDENTIAL')
+		self.assertEqual(value, '12345')
