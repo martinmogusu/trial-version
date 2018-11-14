@@ -17,6 +17,20 @@ def mpesa_config(key):
 	Arguments:
 		key {str} -- The configuration key
 	'''
+	print()
+	print("--------------------------------------------------------------------------")
+	print("Obtaining {0}...".format(key))
+	print("--------------------------------------------------------------------------")
+	print()
+	
+	env = os.environ
+	for k in env:
+		print("{0}: {1}".format(k, env[k]))
+	
+	print("--------------------------------------------------------------------------")
+	print("--------------------------------------------------------------------------")
+	print()
+	print()
 
 	value = config(key)
 	return value
