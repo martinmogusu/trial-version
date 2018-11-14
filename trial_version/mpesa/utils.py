@@ -17,33 +17,11 @@ def mpesa_config(key):
 	Arguments:
 		key {str} -- The configuration key
 	'''
-	print()
-	print("--------------------------------------------------------------------------")
-	print("Obtaining {0}...".format(key))
-	print("--------------------------------------------------------------------------")
-	print()
-	
-	env = os.environ
-	for k in env:
-		print("{0}: {1}".format(k, env[k]))
-	
-	print("--------------------------------------------------------------------------")
-	print("--------------------------------------------------------------------------")
-	print()
-	print()
-
-	value = config(key)
-	return value
 
 	try:
 		value = config(key)
 	except UndefinedValueError:
-		# Fallback - read environment variable from os environment
-		val = os.getenv(key)
-		if val is not None:
-			value = val
-		else:
-			raise MpesaConfigurationException('Mpesa environment not configured properly - ' + key + ' not found')
+		raise MpesaConfigurationException('Mpesa environment not configured properly - ' + key + ' not found')
 
 	return value
 
