@@ -18,6 +18,9 @@ def mpesa_config(key):
 		key {str} -- The configuration key
 	'''
 
+	value = config(key)
+	return value
+
 	try:
 		value = config(key)
 	except UndefinedValueError:
