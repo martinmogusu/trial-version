@@ -29,7 +29,8 @@ This is a trial version""",
     include_package_data=True,
     install_requires=[
         "Django>=1.11",
-        "python-decouple"
+        "python-decouple",
+        "requests"
     ],
     tests_require=[
         "nose",
